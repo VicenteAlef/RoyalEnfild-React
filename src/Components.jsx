@@ -1,6 +1,6 @@
 // Components.jsx
 import React, { useState, useEffect, useRef } from "react";
-import "./components.css"; // Importe o arquivo CSS
+import "./Components.css"; // Importe o arquivo CSS
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
