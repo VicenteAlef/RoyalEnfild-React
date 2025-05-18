@@ -19,7 +19,7 @@ const Home = () => {
         }
         const data = await response.json();
         setMotos(data);
-        console.log(data);
+        console.log(response);
         setLoading(false);
       } catch (error) {
         console.error("Erro ao buscar motos:", error);
