@@ -14,7 +14,7 @@ const MotoDetail = () => {
       try {
         const response = await fetch(
           // "https://royalenfiledapi.onrender.com/REmotos" //url API
-          "https://raw.githubusercontent.com/VicenteAlef/dados-json/refs/heads/main/dados-royal.json" //url raw github
+          "https://api-teste.vicentedeveloper.com/api.php" //url raw github
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
