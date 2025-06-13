@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom"; // Importe useParams para acessar os parâmetros da URL
-import "../styles/MotoDetail.css"; // Importe o arquivo CSS
-import "../Components.css";
 
 const MotoDetail = () => {
   const { id } = useParams(); // Obtém o ID da moto da URL
@@ -53,18 +51,20 @@ const MotoDetail = () => {
 
   return (
     <section className="moto-detail" id="moto-detail">
-      <div className="moto-presentation" id="moto-presentation">
-        <div className="moto-presentation__img">
-          <img src={moto.image_two_link} alt={moto.name} />
+      <div className="grid lg:grid-cols-2" id="moto-presentation">
+        <div className="flex items-center bg-gray-950">
+          <img src={moto.image_two_link} alt={moto.name} className="w-full" />
         </div>
-        <div className="moto-presentation__description">
-          <h1>{moto.name}</h1>
-          <p>{moto.description}</p>
-          <div className="comprar-container">
-            <p>R$ {moto.price.toLocaleString("pt-BR")}</p>
+        <div className="flex flex-col bg-black text-white p-10 md:p-30 md:py-25">
+          <h1 className="text-3xl text-red-600 font-semibold mb-5 sm:mb-10">
+            {moto.name}
+          </h1>
+          <p className="mb-5 sm:mb-10 md:text-xl">{moto.description}</p>
+          <div className="w-full flex justify-center itens-center gap-20">
+            <p className="text-xl">R$ {moto.price.toLocaleString("pt-BR")}</p>
             <button
               id="comprar"
-              className="btn-primary"
+              className="py-1 px-7 bg-red-600 hover:bg-red-700 rounded-full cursor-pointer"
               onClick={() => {
                 // Aqui você implementaria a lógica de compra
                 window.location.href = "#"; // Mantendo o comportamento original por enquanto
@@ -76,15 +76,15 @@ const MotoDetail = () => {
         </div>
       </div>
 
-      <div className="divisory">
-        <h2 className="divisory__title">Detalhes</h2>
+      <div className="w-full flex items-center justify-center bg-black border-t-5 pb-1 border-red-600">
+        <h2 className="text-3xl text-white">Detalhes</h2>
       </div>
 
       <div className="detail" id="detail">
         <img
           src={moto.image_three_link}
           alt={moto.name}
-          className="image-detail"
+          className="mx-auto"
         />
       </div>
     </section>
