@@ -12,7 +12,7 @@ const MotoDetail = () => {
       try {
         const response = await fetch(
           // "https://royalenfiledapi.onrender.com/REmotos" //url API
-          "https://api-teste.vicentedeveloper.com/api.php" //url raw github
+          "https://api-teste.vicentedeveloper.com/api-royal-enfield.php" //url raw github
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -81,11 +81,7 @@ const MotoDetail = () => {
       </div>
 
       <div className="detail" id="detail">
-        <img
-          src={moto.image_three_link}
-          alt={moto.name}
-          className="mx-auto"
-        />
+        <img src={moto.image_three_link} alt={moto.name} className="mx-auto" />
       </div>
     </section>
   );

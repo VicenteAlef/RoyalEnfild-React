@@ -12,7 +12,7 @@ const Home = () => {
       try {
         const response = await fetch(
           // "https://royalenfiledapi.onrender.com/REmotos" //url API Node
-          "https://api-teste.vicentedeveloper.com/api.php" //url API PHP
+          "https://api-teste.vicentedeveloper.com/api-royal-enfield.php" //url API PHP
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
